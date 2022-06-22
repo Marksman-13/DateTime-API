@@ -24,4 +24,8 @@ public class DateTimeController {
         return new ResponseEntity<>(dateTimeService.getToday(), HttpStatus.OK);
     }
 
+    @GetMapping("/now")
+    public ResponseEntity<LocalTime> getTime () {
+        return new ResponseEntity<>(dateTimeService.getTime(), HttpStatus.OK);
+    }
 }
